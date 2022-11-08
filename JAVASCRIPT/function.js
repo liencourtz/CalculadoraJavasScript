@@ -33,3 +33,4 @@ function dividir(){
 
     document.getElementById('tResultado').innerHTML = resultado;
 }
+
