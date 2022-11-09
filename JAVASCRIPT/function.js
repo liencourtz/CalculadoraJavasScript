@@ -1,6 +1,11 @@
-let valorAtual = ""
-let valorAntigo = ""
-let operacao = ""
+let valorAtual = "";
+let valorAntigo = "";
+let operacao = "";
+
+function coletar0(){
+    valorAtual = valorAtual + document.getElementById('tNumber0').value;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+}
 
 function coletar1(){
     valorAtual = valorAtual + document.getElementById('tNumber1').value;
@@ -84,10 +89,13 @@ function dividir(){
 }
 
 function result(){
-    valorAtual = parseFloat(valorAntigo) + parseFloat(operacao) + parseFloat(valorAtual)
     valorAntigo = "";
     valorAntigo = document.getElementById('valorAntigo').innerHTML = valorAntigo;
+    operacao = "";
+    document.getElementById('labelOp').innerHTML = operacao;
     document.getElementById('valorAtual').innerHTML = valorAtual;
+
+    valorAtual = parseFloat(valorAntigo) + parseFloat(valorAtual);
 }
 
 function clear(){
@@ -97,5 +105,4 @@ function clear(){
     document.getElementById('valorAntigo').innerHTML = valorAntigo;
     operacao = "";
     document.getElementById('labelOp').innerHTML = operacao;
-     
 }
