@@ -1,10 +1,59 @@
+let valorAtual = ""
+let valorAntigo = ""
+let operacao = ""
+
+function coletar1(){
+    valorAtual = valorAtual + document.getElementById('tNumber1').value;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+}
+
+function coletar2(){
+    valorAtual = valorAtual + document.getElementById('tNumber2').value;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+}
+
+function coletar3(){
+    valorAtual = valorAtual + document.getElementById('tNumber3').value;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+}
+
+function coletar4(){
+    valorAtual = valorAtual + document.getElementById('tNumber4').value;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+}
+
+function coletar5(){
+    valorAtual = valorAtual + document.getElementById('tNumber5').value;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+}
+
+function coletar6(){
+    valorAtual = valorAtual + document.getElementById('tNumber6').value;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+}
+
+function coletar7(){
+    valorAtual = valorAtual + document.getElementById('tNumber7').value;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+}
+
+function coletar8(){
+    valorAtual = valorAtual + document.getElementById('tNumber8').value;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+}
+
+function coletar9(){
+    valorAtual = valorAtual + document.getElementById('tNumber9').value;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+}
+
 function somar(){
-    number1 = parseFloat(document.getElementById('tNumber1').value)
-    number2 = parseFloat(document.getElementById('tNumber2').value)
-
-    resultado = number1 + number2
-
-    document.getElementById('tResultado').innerHTML = resultado;
+    valorAntigo = parseFloat(valorAtual) 
+    document.getElementById('valorAntigo').innerHTML = valorAntigo;
+    valorAtual = "";
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+    operacao = "+";
+    document.getElementById('labelOp').innerHTML = operacao;
 }
 
 function subtrair(){
@@ -34,3 +83,18 @@ function dividir(){
     document.getElementById('tResultado').innerHTML = resultado;
 }
 
+function result(){
+    valorAtual = parseFloat(valorAntigo) + parseFloat(operacao) + parseFloat(valorAtual)
+    valorAntigo = "";
+    valorAntigo = document.getElementById('valorAntigo').innerHTML = valorAntigo;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+}
+
+function clear(){
+    valorAtual = ""
+    valorAntigo = ""
+    operacao = ""
+    document.getElementById('valorAntigo').innerHTML = valorAntigo;
+    document.getElementById('valorAtual').innerHTML = valorAtual;
+    document.getElementById('labelOp').innerHTML = operacao;
+}
