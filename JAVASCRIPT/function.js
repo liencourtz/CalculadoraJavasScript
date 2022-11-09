@@ -91,10 +91,11 @@ function result(){
 }
 
 function clear(){
-    valorAtual = ""
-    valorAntigo = ""
-    operacao = ""
-    document.getElementById('valorAntigo').innerHTML = valorAntigo;
+    valorAtual = "";
     document.getElementById('valorAtual').innerHTML = valorAtual;
+    valorAntigo = "";
+    document.getElementById('valorAntigo').innerHTML = valorAntigo;
+    operacao = "";
     document.getElementById('labelOp').innerHTML = operacao;
+     
 }
